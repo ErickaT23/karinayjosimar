@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karina &amp; Josimar | 29.11.2026</title>
+  <meta name="description" content="Te invitamos a celebrar la boda de Karina Ramos y Josimar Arango el 29 de noviembre de 2026.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_GT">
+  <meta id="metaOgTitle" property="og:title" content="Karina &amp; Josimar | 29.11.2026">
+  <meta id="metaOgDescription" property="og:description" content="Te invitamos a celebrar la boda de Karina Ramos y Josimar Arango el 29 de noviembre de 2026.">
+  <meta id="metaOgImage" property="og:image" content="https://i.ibb.co/FFLwB4G/MTERRACOTA.png">
+  <meta id="metaKeywords" name="keywords" content="invitacion de boda, Karina, Josimar, boda, La Esperanza, Quetzaltenango">
+  <meta id="metaAuthor" name="author" content="Two Design | Invitaciones Digitales">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Karina &amp; Josimar | 29.11.2026">
+  <meta name="twitter:description" content="Te invitamos a celebrar la boda de Karina Ramos y Josimar Arango el 29 de noviembre de 2026.">
+  <meta name="twitter:image" content="https://i.ibb.co/FFLwB4G/MTERRACOTA.png">
+  <link rel="stylesheet" href="style.css">
+  <!-- (Opcional) Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Luxurious+Script&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  <!-- ===================== HERO / SOBRE (PORTADA) ===================== -->
+<header class="cover" id="cover">
+  <div class="cover-inner">
+    <h1 class="couple luxurious-script-regular" id="coverCouple">Karina <span class="amp">&amp;</span> Josimar</h1>
+
+    <div class="envelope-wrap">
+      <button class="envelope-trigger" id="btnOpenEnvelope" type="button" aria-label="Abrir invitación">
+        <img class="envelope" src="Images/ENVELOPE.png" alt="Sobre invitación">
+      </button>
+    </div>
+
+    <div class="guest-card">
+      <div class="guest-line" id="guestCardName">Nombre del invitado</div>
+      <div class="guest-seats">
+        Hemos reservado para ti <span id="guestCardSeats">x</span> <span id="guestCardSeatsTxt">lugares</span>.
+      </div>
+    </div>
+
+    <button class="btn-primary" id="btnOpenInvite" type="button">
+      Abrir invitación
+    </button>
+
+  </div>
+
+</header>
+
+<button class="music-bubble" id="btnMusic" type="button" aria-label="Reproducir música">
+  <i class="fa-solid fa-play" aria-hidden="true"></i>
+</button>
+
+<audio id="bgMusic" preload="auto" loop>
+  <source id="bgMusicSource" src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- ===================== CONTENIDO INVITACIÓN ===================== -->
+<main id="invitation" class="invitation" aria-hidden="true">
+
+  <!-- HERO FOTO -->
+  <section class="hero-photo fade-in-element" id="hero">
+    <div class="hero-overlay">
+      <div class="hero-composition fade-in-element">
+        <div class="hero-artwork">
+          <img id="heroMainImage" src="Images/E2.png" alt="Gaby y José" class="hero-main-image">
+          <img src="Images/CALA1.png" alt="Cala decorativa" class="hero-flower-image">
+        </div>
+
+        <h2 class="hero-couple-name">
+          <span id="heroBrideName">Gaby</span>
+          <span class="hero-couple-amp">&amp;</span>
+          <span id="heroGroomName">José</span>
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOMBRES EDITORIAL + FECHA VERTICAL + MÚSICA -->
+  <section class="names-editorial fade-in-element" id="names">
+    <div class="marriage-note">
+      <img src="Images/PERLA.png" alt="Perla decorativa" class="note-pearl">
+
+      <div class="marriage-note-inner">
+          <p class="marriage-note-text" id="marriageNoteText">
+            Uniremos nuestra vida en matrimonio con la bendición de Dios y de nuestros amados padres.
+          </p>
+
+          <div class="marriage-note-parents">
+            <div class="marriage-note-parent-block">
+              <h3 id="brideParentsTitle">Padres de la Novia</h3>
+              <p id="brideParentsNames">Roberto Carranza &amp; Amalia de Carranza</p>
+            </div>
+
+            <div class="marriage-note-parent-block">
+              <h3 id="groomParentsTitle">Padres del Novio</h3>
+              <p id="groomParentsNames">Marco Antonio García &amp; Isabel de García</p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="date-highlight fade-in-element" id="dateHighlight">
+    <p class="date-highlight-label" id="dateHighlightLabel">Nuestro gran día</p>
+    <p class="date-highlight-value" id="dateHighlightValue">14 . 11 . 2026</p>
+  </section>
+
+  <section class="full-sep full-sep-rotating" id="storySep">
+    <img id="storySepImg" src="Images/S1.png" alt="Galería de la pareja">
+  </section>
+
+  <!-- CONTADOR -->
+  <section class="countdown fade-in-element" id="countdown">
+    <h3>¡Solo faltan!</h3>
+
+    <div class="countdown-simple" aria-label="Cuenta regresiva para la boda">
+      <div class="countdown-simple-item">
+        <div class="countdown-simple-digit" id="cdDays">00</div>
+        <div class="countdown-simple-label">Días</div>
+      </div>
+      <div class="countdown-simple-item">
+        <div class="countdown-simple-digit" id="cdHours">00</div>
+        <div class="countdown-simple-label">Horas</div>
+      </div>
+      <div class="countdown-simple-item">
+        <div class="countdown-simple-digit" id="cdMins">00</div>
+        <div class="countdown-simple-label">Minutos</div>
+      </div>
+      <div class="countdown-simple-item">
+        <div class="countdown-simple-digit" id="cdSecs">00</div>
+        <div class="countdown-simple-label">Segundos</div>
+      </div>
+    </div>
+
+    <a class="btn-outline calendar-btn" id="calendarBtn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Gaby+%26+Jos%C3%A9&dates=20261114T220000Z/20261115T050000Z&details=Nos+encantar%C3%A1+compartir+este+d%C3%ADa+contigo.&location=San+Francisco+el+Grande%2C+La+Antigua+Guatemala" target="_blank" rel="noopener">Agregar al calendario</a>
+
+    <div class="countdown-events">
+      <article class="ceremony-note">
+        <div class="ceremony-note-inner">
+          <img src="Images/ICONO-1.png" alt="Ceremonia" class="event-note-icon">
+          <h4 id="ceremonyTitle">Ceremonia</h4>
+          <p class="event-note-place" id="ceremonyPlace">San Francisco el Grande</p>
+          <p class="event-note-time" id="ceremonyTime">4:00 pm</p>
+          <p class="event-note-location" id="ceremonyLocation">7a Calle Oriente y Calle de los Pasos, La Antigua Guatemala</p>
+          <a class="btn-outline" id="ceremonyMapLink" href="https://www.google.com/maps/search/?api=1&amp;query=San+Francisco+el+Grande%2C+7a+Calle+Oriente+y+Calle+de+los+Pasos%2C+La+Antigua+Guatemala" target="_blank" rel="noopener">Cómo llegar</a>
+        </div>
+      </article>
+
+      <article class="reception-oval-wrap">
+        <img src="Images/CALA2.png" alt="Cala decorativa" class="reception-cala">
+        <div class="reception-oval">
+          <img src="Images/ICONO-3.png" alt="Recepción" class="event-note-icon">
+          <h4 id="receptionTitle">Recepción</h4>
+          <p class="event-note-place" id="receptionPlace">Conceptio</p>
+          <p class="event-note-time" id="receptionTime">6:00 pm</p>
+          <p class="event-note-location" id="receptionLocation">Antigua Guatemala</p>
+          <a class="btn-outline" id="receptionMapLink" href="https://maps.app.goo.gl/Xsf621ZbtQx2e2rM8" target="_blank" rel="noopener">Cómo llegar</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="itinerary-editorial fade-in-element" id="itinerary">
+    <div class="itinerary-editorial-art">
+      <img src="Images/E3.png" alt="Itinerario" class="itinerary-editorial-image">
+
+        <div class="itinerary-editorial-note">
+          <h3 id="itineraryTitle">Itinerario</h3>
+
+          <div class="itinerary-track" id="timelineTrack">
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section class="dress-editorial fade-in-element" id="dressCode">
+    <h3 id="dressCodeTitle">Dress Code</h3>
+    <p class="dress-editorial-subtitle" id="dressCodeSubtitle">Traje formal y de gala</p>
+    <p class="dress-editorial-text" id="dressCodeText">Los colores blanco, dorado, zapote y corinto quedan exclusivamente reservados para la novia y su corte. Nuestra boda será en un jardín y al aire libre, por lo que no olvides abrigarte bien y llevar zapatos cómodos.</p>
+
+    <div class="dress-editorial-swatches" id="dressCodeSwatches" aria-label="Colores reservados">
+      <span class="dress-swatch" style="background:#FFFFFF" aria-label="Blanco"></span>
+      <span class="dress-swatch" style="background:#D4AF37" aria-label="Dorado"></span>
+      <span class="dress-swatch" style="background:#DD6E42" aria-label="Zapote"></span>
+      <span class="dress-swatch" style="background:#66023C" aria-label="Corinto"></span>
+    </div>
+  </section>
+
+  <section class="gift-editorial fade-in-element" id="giftSection">
+    <h3 id="giftTitle">Regalo</h3>
+    <p class="gift-editorial-text" id="giftText">Nuestra mayor alegría es contar con tu compañía. Si deseas tener un detalle con nosotros, agradeceremos con mucho cariño tu obsequio en nuestra lluvia de sobres.</p>
+    <a class="btn-outline" id="giftLink" href="#" target="_blank" rel="noopener">Bodas Cemaco</a>
+  </section>
+
+  <section class="full-sep full-sep-rotating" id="celebrationSep">
+    <img id="celebrationSepImg" src="Images/C1.png" alt="Galería de celebración">
+  </section>
+
+<!-- ================= MODAL TRANSFERENCIA ================= -->
+<div id="transferBackdrop" class="transfer-backdrop" aria-hidden="true" style="display:none">
+  <div class="transfer-modal" role="dialog" aria-modal="true">
+
+    <button class="transfer-close" id="btnCloseTransfer" type="button">×</button>
+
+    <h3>Datos de Transferencia</h3>
+
+    <p class="transfer-names" id="transferNames">Gaby</p>
+
+    <div class="transfer-info" id="transferData">
+      <p><strong>Medio:</strong> <span id="bankName"></span></p>
+      <p><strong>Cuenta monetaria:</strong> <span id="accountNumber"></span></p>
+      <p><strong>Tipo:</strong> <span id="accountType"></span></p>
+      <p><strong>Nombre:</strong> <span id="accountOwner">Gaby</span></p>
+    </div>
+    
+    <button class="btn-outline copy-btn" id="btnCopyAccount" type="button">
+      Copiar datos bancarios
+    </button>
+
+    <div id="copyToast" class="copy-toast" style="display:none">✅ Copiado</div>
+
+  </div>
+</div>
+
+<section class="wishes fade-in-element" id="wishesSection">
+  <h3 id="wishesTitle">Buenos deseos</h3>
+  <p class="wishes-intro" id="wishesIntro">Déjanos un mensaje especial para este día tan importante.</p>
+  <div class="wishes-actions">
+    <button class="btn-outline" id="btnToggleWishForm" type="button" aria-controls="wishFormPanel" aria-expanded="false">Enviar un mensaje</button>
+    <button class="btn-outline" id="btnToggleWishes" type="button" aria-controls="wishesPanel" aria-expanded="false">Leer mensajes</button>
+  </div>
+  <div class="collapsible-panel" id="wishFormPanel" aria-hidden="true">
+    <form class="wish-form" id="wish-form">
+      <input id="wish-name" type="text" placeholder="Tu nombre" autocomplete="name" required>
+      <textarea id="wish-message" rows="4" placeholder="Escribe tu mensaje" required></textarea>
+      <button class="btn-outline" type="submit">Enviar mensaje</button>
+      <p class="wish-status" id="wish-status" aria-live="polite"></p>
+    </form>
+  </div>
+  <div class="collapsible-panel" id="wishesPanel" aria-hidden="true">
+    <div class="wishes-list" id="wishes"></div>
+  </div>
+</section>
+
+<section class="adults-only fade-in-element" id="adultsOnlySection">
+  <h3 id="adultsOnlyTitle">Solo adultos</h3>
+  <p class="adults-only-text" id="adultsOnlyText">Amamos a sus pequeños; sin embargo, por las características del lugar y pensando en su seguridad, hemos decidido celebrar este momento únicamente entre adultos.</p>
+</section>
+
+<section class="rsvp fade-in-element" id="rsvpSection">
+  <div class="rsvp-editorial-art">
+    <h3 class="rsvp-editorial-title" id="rsvpTitle">Confirmar Asistencia</h3>
+    <p class="rsvp-strong rsvp-editorial-copy" id="rsvpCopy">
+      Para nosotros es muy importante que confirmes tu asistencia lo antes posible,
+      o bien indicarnos si no podrás acompañarnos.
+    </p>
+    <img src="Images/E4.png" alt="Confirmar asistencia" class="rsvp-editorial-image">
+    <img src="Images/CALA1.png" alt="Cala decorativa" class="rsvp-editorial-flower">
+
+    <div class="rsvp-editorial-note">
+      <form id="rsvp-form" class="rsvp-form" novalidate>
+        <div class="form-group">
+          <input type="text" id="rsvp-name" name="name" value="Nombre del invitado" readonly>
+        </div>
+
+        <div class="form-group">
+          <p class="rsvp-label">Asistirás</p>
+          <div class="rsvp-response-group">
+            <label class="rsvp-radio-option" for="rsvp-response-yes">
+              <input type="radio" id="rsvp-response-yes" name="attendance" value="SI">
+              <span>Sí, con mucho gusto</span>
+            </label>
+            <label class="rsvp-radio-option" for="rsvp-response-no">
+              <input type="radio" id="rsvp-response-no" name="attendance" value="NO">
+              <span>No, lamentablemente no podré</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group" id="guest-count-wrapper" style="display:none">
+          <label for="guest-count">Cantidad de pases</label>
+          <select id="guest-count" name="guests" disabled></select>
+        </div>
+
+        <button type="submit" id="btnConfirmarRsvp">Confirmar asistencia</button>
+      </form>
+
+      <div id="msgRsvp" class="rsvp-msg" style="display:none"></div>
+    </div>
+  </div>
+</section>
+
+  <!-- FOTO CAMBIANTE -->
+  <section class="full-sep full-sep-rotating" id="rotatingSep">
+    <img id="rotatingSepImg" src="Images/F1.png" alt="Foto pareja">
+  </section>
+
+  <!-- CIERRE -->
+  <section class="closing fade-in-element" id="closing">
+    <p class="closing-subtitle" id="closingSubtitle">con amor</p>
+    <h3 id="closingCouple">Gaby &amp; José</h3>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div id="social-icons">
+<a id="footerFacebook" href="https://www.facebook.com/thetwodesign" target="_blank" aria-label="Facebook">
+  <i class="fab fa-facebook"></i>
+</a>
+    <a id="footerInstagram" href="https://www.instagram.com/thetwodesign" target="_blank" aria-label="Instagram">
+  <i class="fab fa-instagram"></i>
+</a>
+</div>
+    <div class="footer-logo">
+      <img id="footer-logo" alt="Logo de la empresa" src="Images/logo.png">
+    </div>
+  </footer>
+
+</main>
+<script src="config.js"></script>
+<script type="module" src="database.js"></script>
+<script src="loads.js"></script>
+<script src="rsvp.js"></script>
+<script type="module" src="wishes.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
+  
