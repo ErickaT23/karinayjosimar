@@ -76,8 +76,8 @@ const config = {
   itinerario: {
     titulo: "Itinerario",
     items: [
-      { icono: "Images/ICONO-1.png", alt: "Ceremonia", hora: "10:00 AM", texto: "Ceremonia" },
-      { icono: "Images/ICONO-3.png", alt: "Recepción", hora: "11:00 AM", texto: "Recepción" }
+      { icono: "Images/ICONOS/ICONO-1.png", alt: "Ceremonia", hora: "10:00 AM", texto: "Ceremonia" },
+      { icono: "Images/ICONOS/ICONO-3.png", alt: "Recepción", hora: "11:00 AM", texto: "Recepción" }
     ]
   },
   dressCode: {
@@ -121,9 +121,9 @@ const config = {
   },
   galeria: {
     portadaPrincipal: "Images/E2.png",
-    historia: ["Images/S1.png", "Images/S2.png"],
-    celebracion: ["Images/C1.png", "Images/C2.png"],
-    pareja: ["Images/F1.png", "Images/F2.png"]
+    historia: ["Images/FOTOS/V1.png"],
+    celebracion: ["Images/FOTOS/V2.png"],
+    pareja: ["Images/FOTOS/V4.png", "Images/FOTOS/H1.png", "Images/FOTOS/H2.png"]
   },
   footer: {
     hashtag: "#KarinaYJosimar",
