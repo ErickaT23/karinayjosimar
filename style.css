@@ -1198,7 +1198,7 @@ a{
     background: linear-gradient(105deg, #665843 0%, #98815d 18%, #d5c19b 35%, #ad976f 50%, #e1d0aa 64%, #927955 82%, #5f503d 100%);
     background-size: 220% auto;
     border-color: rgba(153,121,80,.28);
-    color: #FFFFFF;
+    color: #81341e;
     box-shadow: 0 10px 22px rgba(153,121,80,.18);
   }
   .btn-outline,
@@ -1219,7 +1219,7 @@ a{
     background: linear-gradient(105deg, #665843 0%, #98815d 18%, #d5c19b 35%, #ad976f 50%, #e1d0aa 64%, #927955 82%, #5f503d 100%);
     background-position: 100% 50%;
     border-color: rgba(153,121,80,.4);
-    color: #FFFFFF;
+    color: #81341e;
   }
   .event-links{
     display:flex;
@@ -1386,7 +1386,7 @@ a{
   .rsvp .btn-outline,
   .rsvp #btnConfirmarRsvp,
   .rsvp .rsvp-radio-option span{
-    background:transparent;
+    background:url("Images/TEXTURAS/textura-2.png") center/cover no-repeat;
     border-color:#81341e;
     color:#81341e;
     box-shadow:0 8px 18px rgba(129,52,30,.12);
@@ -1395,7 +1395,7 @@ a{
   .rsvp #btnConfirmarRsvp:hover,
   .rsvp .rsvp-radio-option:hover span,
   .rsvp .rsvp-radio-option input:checked + span{
-    background:rgba(129,52,30,.08);
+    background:url("Images/TEXTURAS/textura-2.png") center/cover no-repeat;
     border-color:#81341e;
     color:#81341e;
   }
@@ -1429,10 +1429,10 @@ a{
   }
   .rsvp #btnConfirmarRsvp{
     margin-top:20px;
-    background:var(--gold-text);
+    background:url("Images/TEXTURAS/textura-2.png") center/cover no-repeat;
     background-size:220% auto;
     border-color:rgba(153,121,80,.28);
-    color:#FFFFFF;
+    color:#81341e;
     box-shadow:0 10px 22px rgba(153,121,80,.18);
   }
   .album .event-icon,
@@ -1665,7 +1665,7 @@ a{
     }
     .rsvp-editorial-flower{
       right:-4%;
-      top:25%;
+      top:54%;
       width:30%;
     }
     .rsvp-editorial-note{
