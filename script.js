@@ -246,7 +246,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 6) Separadores rotativos
   initRotatingSep("rotatingSepImg", getInvitationConfig()?.galeria?.pareja || ["Images/FOTOS/V4.png", "Images/FOTOS/H1.png", "Images/FOTOS/H2.png"]);
-  initRotatingSep("celebrationSepImg", getInvitationConfig()?.galeria?.celebracion || ["Images/FOTOS/V2.png"]);
   initRotatingSep("storySepImg", getInvitationConfig()?.galeria?.historia || ["Images/FOTOS/V1.png"]);
 });
 

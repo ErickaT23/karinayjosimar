@@ -91,7 +91,7 @@ const config = {
   },
   regalo: {
     titulo: "Mesa de Regalos",
-    descripcion: "Te recomendamos puedas elegir tu regalo en el link adjunto.",
+    descripcion: "Su compañía en este día especial es el mejor regalo. Sin embargo, hemos seleccionado una mesa de regalos exclusiva en Cemaco. A través del siguiente enlace podrán consultar nuestra selección y, si prefieren realizar su compra en tienda física, les agradeceremos utilizar nuestro código de boda para que su regalo sea registrado en nuestra lista.",
     boton: "Bodas Cemaco",
     url: "https://www.cemaco.com/list/BODAARANGORAMOS29112026",
     transferencia: {
@@ -121,7 +121,7 @@ const config = {
   },
   galeria: {
     portadaPrincipal: "Images/E2.png",
-    historia: ["Images/FOTOS/V1.png"],
+    historia: ["Images/FOTOS/V1.png", "Images/FOTOS/H3.png"],
     celebracion: ["Images/FOTOS/V2.png"],
     pareja: ["Images/FOTOS/V4.png", "Images/FOTOS/H1.png", "Images/FOTOS/H2.png"]
   },
