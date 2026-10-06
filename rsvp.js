@@ -234,7 +234,7 @@ document.addEventListener("DOMContentLoaded", () => {
   (async () => {
     if (!invitado) return;
     try {
-      const ya = await apiCheck(getRemoteGuestId(invitado.id));
+      const ya = Boolean(await window.RSVPDatabase?.getConfirmationByGuestId?.(getEventId(), invitado.id));
       if (ya) {
         markConfirmedUI();
       } else {
