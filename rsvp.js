@@ -95,6 +95,7 @@ function getGuestFromURL() {
       id: String(window.currentGuest.id),
       nombre: window.currentGuest.name || "Invitado",
       pases: Number(window.currentGuest.passes || 1),
+      omitPasses: window.currentGuest.omitPasses === true,
     };
   }
 
@@ -163,6 +164,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let invitado = getGuestFromURL();
 
+  async function loadGuestFromFirebase() {
+    const id = new URLSearchParams(window.location.search).get("id");
+    const db = window.RSVPDatabase;
+    if (!id || !db?.getInvitadoById) return;
+    try {
+      const remote = await db.getInvitadoById(window.currentEventId, id);
+      if (!remote || remote.activo === false) return;
+      window.currentGuest = {
+        id: String(remote.id || id),
+        name: String(remote.nombre || "Invitado"),
+        passes: Number(remote.pases || 1),
+        omitPasses: remote.omitPasses === true,
+      };
+      window.dispatchEvent(new Event("guest:updated"));
+    } catch (error) {
+      console.warn("No se pudo cargar el invitado desde Firebase:", error);
+    }
+  }
+
   function paintGuestData() {
     invitado = getGuestFromURL();
 
@@ -174,6 +194,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     inputNombre.value = invitado.nombre;
+    const isLongName = invitado.nombre.length > 15;
+    inputNombre.rows = isLongName ? 2 : 1;
+    inputNombre.classList.toggle("is-multiline", isLongName);
 
     const maxPasses = Math.max(1, Number(invitado.pases || 1));
     guestCount.innerHTML = "";
@@ -194,6 +217,8 @@ document.addEventListener("DOMContentLoaded", () => {
   paintGuestData();
   toggleGuestCount();
   hideMsg(msg);
+
+  loadGuestFromFirebase();
 
   window.addEventListener("guest:updated", paintGuestData);
   radioYes.addEventListener("change", toggleGuestCount);

@@ -278,6 +278,8 @@ function paintGuestCard() {
   }
 }
 
+window.addEventListener("guest:updated", paintGuestCard);
+
 /* ===================== ABRIR INVITACIÓN ===================== */
 function openInvitation() {
   const cover = $$("#cover");

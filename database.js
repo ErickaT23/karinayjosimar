@@ -170,6 +170,7 @@ async function updateInvitado(eventId, guestId, payload) {
     id: String(payload?.id || current?.id || targetGuestId),
     nombre: String(payload?.nombre || current?.nombre || "Invitado").trim() || "Invitado",
     pases: Math.max(1, Number(payload?.pases ?? current?.pases ?? 1) || 1),
+    omitPasses: payload?.omitPasses === true || current?.omitPasses === true,
     activo: typeof payload?.activo === "boolean" ? payload.activo : (typeof current?.activo === "boolean" ? current.activo : true),
   };
 
