@@ -183,6 +183,10 @@ async function deleteInvitado(eventId, guestId) {
   return updateInvitado(eventId, guestId, { ...current, activo: false });
 }
 
+async function clearConfirmations(eventId) {
+  await set(ref(db, getEventRsvpPath(resolveEventId(eventId))), {});
+}
+
 async function saveWish(eventId, wish) {
   const wishesRef = ref(db, getEventDeseosPath(resolveEventId(eventId)));
   return push(wishesRef, wish);
@@ -215,6 +219,7 @@ window.RSVPDatabase = {
   subscribeToInvitados,
   updateInvitado,
   deleteInvitado,
+  clearConfirmations,
   saveWish,
   subscribeToWishes
 };

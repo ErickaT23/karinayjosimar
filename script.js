@@ -262,6 +262,11 @@ function paintGuestCard() {
 
   if (g && g.name) {
     nameEl.textContent = g.name;
+    if (g.omitPasses) {
+      seatsEl.parentElement?.style.setProperty("display", "none");
+      return;
+    }
+    seatsEl.parentElement?.style.removeProperty("display");
     const p = Number(g.passes || 1);
     seatsEl.textContent = String(p);
     if (seatsTxtEl) seatsTxtEl.textContent = p === 1 ? "lugar" : "lugares";
