@@ -64,6 +64,7 @@ body {
 
 .dashboard-header h1 {
   margin: 0.5rem 0 0;
+  padding: 10px;
   font-family: "Pinyon Script", cursive;
   font-size: clamp(3.4rem, 7vw, 5.4rem);
   font-weight: 400;

@@ -139,6 +139,13 @@ function resetConfirmUI() {
   document.querySelectorAll('#rsvp-form input, #rsvp-form select, #rsvp-form button').forEach((el) => {
     if (!el.hasAttribute("readonly")) el.disabled = false;
   });
+  document.querySelectorAll('#rsvp-form input[type="radio"]').forEach((el) => {
+    el.checked = false;
+  });
+  const guestCount = $("#guest-count");
+  const guestCountWrapper = $("#guest-count-wrapper");
+  if (guestCount) guestCount.selectedIndex = 0;
+  if (guestCountWrapper) guestCountWrapper.style.display = "none";
 
   if (btn) {
     btn.textContent = "Confirmar asistencia";
