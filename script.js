@@ -262,7 +262,7 @@ function paintGuestCard() {
 
   if (g && g.name) {
     nameEl.textContent = g.name;
-    if (g.omitPasses) {
+    if (String(g.id) === "1" || g.omitPasses) {
       seatsEl.parentElement?.style.setProperty("display", "none");
       return;
     }

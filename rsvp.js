@@ -95,7 +95,7 @@ function getGuestFromURL() {
       id: String(window.currentGuest.id),
       nombre: window.currentGuest.name || "Invitado",
       pases: Number(window.currentGuest.passes || 1),
-      omitPasses: window.currentGuest.omitPasses === true,
+      omitPasses: String(window.currentGuest.id) === "1" || window.currentGuest.omitPasses === true,
     };
   }
 
@@ -105,7 +105,7 @@ function getGuestFromURL() {
   const m = (seatsEl?.textContent || "").match(/\d+/);
   const pases = m ? parseInt(m[0], 10) : 1;
 
-  return { id, nombre, pases };
+  return { id, nombre, pases, omitPasses: String(id) === "1" };
 }
 
 function markConfirmedUI(message) {
@@ -182,7 +182,7 @@ document.addEventListener("DOMContentLoaded", () => {
         id: String(remote.id || id),
         name: String(remote.nombre || "Invitado"),
         passes: Number(remote.pases || 1),
-        omitPasses: remote.omitPasses === true,
+        omitPasses: String(remote.id || id) === "1" || remote.omitPasses === true,
       };
       window.dispatchEvent(new Event("guest:updated"));
     } catch (error) {
@@ -205,6 +205,11 @@ document.addEventListener("DOMContentLoaded", () => {
     inputNombre.rows = isLongName ? 2 : 1;
     inputNombre.classList.toggle("is-multiline", isLongName);
 
+    const omitPasses = String(invitado.id) === "1" || invitado.omitPasses === true;
+    guestCountWrapper.style.display = "none";
+    guestCount.disabled = omitPasses;
+    if (omitPasses) return;
+
     const maxPasses = Math.max(1, Number(invitado.pases || 1));
     guestCount.innerHTML = "";
     for (let count = maxPasses; count >= 1; count -= 1) {
@@ -216,7 +221,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function toggleGuestCount() {
-    const show = radioYes.checked;
+    const show = radioYes.checked && !(invitado && (String(invitado.id) === "1" || invitado.omitPasses === true));
     guestCountWrapper.style.display = show ? "grid" : "none";
     guestCount.disabled = !show;
   }
