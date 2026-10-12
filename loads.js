@@ -39,8 +39,8 @@ const guests = [
   { id: "37", name: "Gabriela Quemé", passes: 1 },
   { id: "38", name: "Edgar Recinos y Familia", passes: 2 },
   { id: "39", name: "Reyna Arango y Familia", passes: 2 },
-  { id: "40", name: "Nanci Ramos", passes: 1, omitPasses: true },
-  { id: "41", name: "Estefany Ramos", passes: 1, omitPasses: true },
+  { id: "42", name: "Nanci Ramos", passes: 1, omitPasses: true },
+  { id: "43", name: "Estefany Ramos", passes: 1, omitPasses: true },
 ];
 
 window.LocalGuestSeeds = {
